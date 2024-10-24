@@ -1,0 +1,12 @@
+# Node.js dependencies (install using npm)
+discord.js@13.6.0
+dotenv@16.0.0
+pg@8.7.3
+
+# System requirements
+# Node.js 16.x or higher
+# PostgreSQL 12.x or higher
+
+# Note: This file is not standard for Node.js projects.
+# It's recommended to use package.json for managing Node.js dependencies.
+

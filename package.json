@@ -1,0 +1,22 @@
+{
+    "name": "minecraft-bot",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+      "discord.js": "^14.16.3",
+      "dotenv": "^16.4.5",
+      "pg": "^8.13.0",
+      "rcon-client": "^4.2.5"
+    },
+    "engines": {
+      "node": ">=18.0.0"
+    }
+  }
+  
