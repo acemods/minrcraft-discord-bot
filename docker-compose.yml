@@ -3,13 +3,7 @@ version: '3.8'
 services:
   bot:
     build: .
-    environment:
-      - DISCORD_TOKEN=${DISCORD_TOKEN}
-      - DB_USER=postgres
-      - DB_PASSWORD=yourpassword
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_NAME=minecraft_locations
+    env_file: .env
     depends_on:
       - db
     restart: unless-stopped
@@ -17,13 +11,12 @@ services:
   db:
     image: postgres:13
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=yourpassword
-      - POSTGRES_DB=minecraft_locations
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
 volumes:
   postgres_data:
-
